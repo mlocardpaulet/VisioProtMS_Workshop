@@ -6,7 +6,6 @@ output: html_document
 bibliography: bibliography_VisioWS.bib
 ---
 
-
 <!-- {::options parse_block_html="true" /} -->
 
 <style>
@@ -20,24 +19,18 @@ div.yellow { background-color:#FFFBD0; border-radius: 5px; padding: 8px 8px 2px 
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Introduction
+<br>
+<br>
+<br>
+<br>
 
-## VisioProt-MS
+In this workshop, we will use **VisioProt-MS**  (@Locard-Paulet2018) to analyse two forms of the proteosomal core particule (work inspired from @Gersch2015).
 
-The application is described in the paper @Locard-Paulet2018. 
-It is a web application accessible at the address given by the instructor. 
+### Composition of the core particule of the proteasome:
 
-## The proteasome
+The 20S core particule of the proteasome is constituted of 4 rings constituted by 7 subunits each in a \( \alpha7 \):\( \beta7 \):\( \beta7 \):\( \alpha7 \) stoichiometry. Amongst these, only \( \beta1 \), \( \beta2 \) and \( \beta5 \) are catalytically active, and during inflammation, they can be exhanged with alternative \( \beta1i \), \( \beta2i \) and \( \beta5i \) to form the immunoproteasome.
 
-Many information on the 20S core particule of the proteasome (constitutive and immuno) can be found here @Gersch2015.
-
-### Useful information
-
-Composition of the core particule of the proteasome:
-
-The 20S core particule of the proteasome is constituted of 4 rings constituted by 7 subunits each in a \( \alpha \ 7 \):\( \beta \ 7 \):\( \beta \ 7 \):\( \alpha \ 7 \) stoichiometry. Amongst these, only \( \beta \ 1 \), \( \beta \ 2 \) and \( \beta \ 5 \) are catalytically active, and during inflammation, they can be exhanged with alternative \( \beta \ 1i \), \( \beta \ 2i \) and \( \beta \ 5i \) to form the immunoproteasome.
-
-Its most common post-translational modificaitons (PTMS):
+Their most common post-translational modifications (PTMs) are:
 
 * Serine/threonine phosphorylation: + 80 Da
 * N-terminal truncation: variable \( \Delta \) mass.
@@ -51,22 +44,20 @@ Molecular weights of the subunits identified by @Gersch2015:
 
 ***********************************
 
-# Hands on
+# 1. Comparison of commercial samples of the standard and immuno proteasome core particules
 
-## 1. Comparison of commercial samples of the standard and immuno proteasome core particules
-
-The aim of this exercise is to compare the composition of commercial standard 20S (std20S) and immuno-20S (i20S) from Enzo Life science. 
+The aim of this exercise is to compare the composition of commercial standard 20S (std20S) and immuno-20S (i20S). 
 
 ### Input data
 
-Data after RoWinPro deconvolution:
+We will work with the top-down MS data after deconvolution with RoWinPro:
 
 * Top-down MS analysis of the std20S: [ProteasomeCommercial_std20S_MS.csv](input_data/ProteasomeCommercial_std20S_MS.csv)
 * Top-down MS analysis of the i20S: [ProteasomeCommercial_i20S_MS.csv](input_data/ProteasomeCommercial_i20S_MS.csv)
 
 ### Step by step instructions
 
-1. Load files in the `MS` panel of VisioProt-MS. You can (should):
+1. Load the files in the `MS` panel of VisioProt-MS. You can:
     * load them one at a time to have a feel for their respective signal and adapt the signal threshold for plotting. This will also allow you to check which proteoforms are the most abundant in case of clusters of elution peaks.
     * load them both at the same time to directly identify which proteoforms are present in only one or the two samples.
   
@@ -75,7 +66,7 @@ Data after RoWinPro deconvolution:
 </div>
 
 
-2. Zoom in on the region of interest.
+2. Zoom in on the region(s) of interest.
 3. Use the option `show data label` to get the molecular weigths of the proteoforms of interest (you may need to zoom in further to distinguish the different eluted forms that correspond to a given proteoform).
 
 <div class = "blue">
@@ -88,20 +79,22 @@ Data after RoWinPro deconvolution:
 * Are some subunits modified?
 * Is the std20S pure?
 * Is the i20S pure?
-* Make a figure to illustrate your findings.
+* Make a figure / figures to illustrate your findings.
+
+---------------------------------
 
 ## 2. Home-made purification of i20S using Size-exclusion chromatography (SEC)
 
-\( \beta \ 1i \), \( \beta \ 2i \) and \( \beta \ 5i \) were expressed in HEK293T-EBNA and proteasome were immuno-purified with an anti-\( \alpha \ 2 \). Then, a SEC was performed to separate the std20S and i20S for their separate characterisation.
+\( \beta1i \), \( \beta2i \) and \( \beta5i \) were expressed in HEK293T-EBNA and the proteasome core particules were immuno-purified (IP) with an anti-\( \alpha2 \). Then, a SEC was performed to separate the std20S and i20S for their separate characterisation.
 
-![SEC of the immuno-enriched proteasome samples](SEC.png)
+![Figure 1: SEC of the immuno-enriched proteasome samples](SEC.png)
 
-### Useful information
+#### Useful information:
 
 * Theoretical mass of HNRPC1 (P07910-2): 32338 Da
 * Theoretical mass of HNRPC2 (P07910-1): 33670 Da
 
-These are the 2 components of the [Heterogeneous nuclear ribonucleoproteins C1/C2](https://www.uniprot.org/uniprot/P07910) that bind to mRNA. 
+These are the 2 components of the [Heterogeneous nuclear ribonucleoproteins C1/C2](https://www.uniprot.org/uniprot/P07910) that bind to mRNA. These may have been co-immunopurified with the proteosomal core particules during the IP.
 
 ### Input data
 
@@ -111,7 +104,7 @@ The sample before SEC has been analysed by top-down MS and MS/MS. The associated
 * MS/MS: [ProteasomeBeforeSEC_MSMSSpectrumInfo.txt](input_data/ProteasomeBeforeSEC_MSMSSpectrumInfo.txt)
 * Results of the MS/MS search (Biopharma Finder): [ProteasomeBeforeSEC_PSMs.txt](input_data/ProteasomeBeforeSEC_PSMs.txt)
 
-Analysis of the fractions eluted from SEC in top-down MS. Data after RoWinPro deconvolution:
+Analysis of the fractions eluted from SEC in top-down MS (after RoWinPro deconvolution):
 
 * Top-down MS analysis of fraction 1: [ProteasomeFraction01_MS.csv](input_data/ProteasomeFraction01_MS.csv)
 * Top-down MS analysis of fraction 2: [ProteasomeFraction02_MS.csv](input_data/ProteasomeFraction02_MS.csv)
@@ -119,12 +112,12 @@ Analysis of the fractions eluted from SEC in top-down MS. Data after RoWinPro de
 
 ### Step by step instructions
 
-1. Load files corresponding to the 3 fractions after SEC in the `MS` panel of VisioProt-MS. Like for the previous part, you can (should):
+1. Load files corresponding to the 3 fractions after SEC in the `MS` panel of VisioProt-MS. Like for the first part of the workshop, you can:
     * load them one at a time to have a feel for their respective signal and adapt the signal threshold for plotting. This will also allow you to check which proteoforms are the most abundant in case of clusters of elution peaks.
     * load them both at the same time to directly identify which proteoforms are present in only one or the two samples.
   
 <div class = "orange">
-<strong>!</strong> Loading 3 files at a time can be long. It can help to uncheck the `show data label` box and to reduce the threshold (amount of data plotted).
+<strong>!</strong> Loading 3 files at a time can be long. It will be faster if you uncheck the `show data label` box and reduce the initial threshold (number of points to be plotted).
 </div>
 
 2. Zoom in the region of interest (we expect all the subunits of the proteasome to be eluted between 12.5 and 18 min, with molecular weights between 20000 and 30000 Da).
@@ -133,14 +126,16 @@ Analysis of the fractions eluted from SEC in top-down MS. Data after RoWinPro de
 <strong>Tip:</strong> When you have checked the box `show data label`, it is possible to hide the points of a specific sample by clicking on it in the legend. Click again to make it reappear.
 </div>
 
+<br>
+
 <div class = "blue">
-<strong>Tip:</strong> You can try overlaying the top-down MS runs of the commercical std20S and i20S used in the first part of this workshop to identify the subunits of the core particule of the proteasome. Be aware that there may be a shift in retention times though.
+<strong>Tip:</strong> You can try overlaying the top-down MS runs of the commercical std20S and i20S used in the first part of this workshop to identify the subunits of the core particule of the proteasome. Be aware that there may be a shift in retention times.
 </div>
 
 ### Questions
 
-* Do you find all the subunits expected in the i20S? Did the SEC allow a the purification of the i20S? If yes, what fraction would you choose to study the i20S?
-* Are some subunits modified? @Gersch2015 detected \( \alpha \ 7 \) with a phosphorylation. Can you see it in any of the fractions?
+* Do you find all the subunits expected? Did the SEC allow a the purification of the i20S? If yes, what fraction would you choose to study the i20S?
+* Are some subunits modified? @Gersch2015 detected \( \alpha7 \) with a phosphorylation. Can you see it in any of the fractions?
 * What is the mass of the major contaminant in the sample before SEC? Can you identify it?
 * Make figures to illustrate your findings.
 
@@ -148,18 +143,24 @@ Analysis of the fractions eluted from SEC in top-down MS. Data after RoWinPro de
 
 If you still have time, you can load the MS/MS data from the analysis of the sample before SEC. Maybe with these data you can confirm that std20S was present in the sample before immuno-purification?
 
-1. Check the `MS mode` box `MS/MS` box to access the MS/MS panel of VisioProt-MS.
+1. Check the box `MS/MS` (`MS mode`) to access the MS/MS panel of VisioProt-MS.
 2. In `Origin of the MS/MS files`, check `Proteome Discoverer`.
-3. Load the MSMSspectrum info and PSM files.
+3. Load the MSMSspectrumInfo and PSM files.
 
 <div class = "yellow">
-<strong>-></strong>  The data from the MS/MS acquisition appear. 
+<strong>-></strong>  The data from MS/MS acquisition appear. 
 </div>
 
-4. If you want to load the corresponding MS trace, select the file in `Select input file for MS`. 
+4. If you want to load the corresponding MS trace, select the corresponding file in `Select input file for MS`. 
 
 <div class = "yellow">
-<strong>-></strong>  The corresponding MS trace appears. Since the acquisition parameters are adapted to a MS/MS run, the retention times, detection limits and sensitivity may be different from a regular top-down MS run.
+<strong>-></strong>  The corresponding MS trace appears.
+</div>
+
+<br>
+
+<div class = "orange">
+<strong>!</strong>  Since the acquisition parameters are adapted to a MS/MS run, the retention times, detection limits and sensitivity may be different from a regular top-down MS run.
 </div>
 
 ------------------
