@@ -1,0 +1,29 @@
+	Subunit	ID	Swiss-Prot	Specific of i20S or std20S	MW (Da)
+std20S	alpha1	PSMA6	P60900	f	"27,399"
+std20S	alpha2	PSMA2	P25787	f	
+std20S	alpha3	PSMA4	P25789	f	
+std20S	alpha4	PSMA7	O14818	f	
+std20S	alpha5	PSMA5	P28066	f	
+std20S	alpha6	PSMA1	P25786	f	
+std20S	alpha7	PSMA3	P25788	f	
+std20S	beta3	PSMB3	P49720	f	
+std20S	beta4	PSMB2	P49721	f	
+std20S	beta6	PSMB1	P20618	f	
+std20S	beta7	PSMB4	P28070	f	
+i20S	alpha1	PSMA6	P60900	f	
+i20S	alpha2	PSMA2	P25787	f	
+i20S	alpha3	PSMA4	P25789	f	
+i20S	alpha4	PSMA7	O14818	f	
+i20S	alpha5	PSMA5	P28066	f	
+i20S	alpha6	PSMA1	P25786	f	
+i20S	alpha7	PSMA3	P25788	f	
+i20S	beta3	PSMB3	P49720	f	
+i20S	beta4	PSMB2	P49721	f	
+i20S	beta6	PSMB1	P20618	f	
+i20S	beta7	PSMB4	P28070	f	
+std20S	beta1	PSMB6	P28072	t	
+std20S	beta2	PSMB7	Q99436	t	
+std20S	beta5	PSMB5	P28074	t	
+i20S	beta1i	PSMB9	P28065	t	
+i20S	beta2i	PSMB10	P40306	t	
+i20S	beta5i	PSMB8	P28062	t	
