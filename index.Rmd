@@ -85,7 +85,7 @@ We will work with the top-down MS data after deconvolution with RoWinPro:
 
 ## 2. Home-made purification of i20S using Size-exclusion chromatography (SEC)
 
-\( \beta1i \), \( \beta2i \) and \( \beta5i \) were expressed in HEK293T-EBNA and the proteasome core particules were immuno-purified (IP) with an anti-\( \alpha2 \). Then, a SEC was performed to separate the std20S and i20S for their separate characterisation.
+\( \beta1i \), \( \beta2i \) and \( \beta5i \) were expressed in HEK293T-EBNA and the proteasome core particules were immuno-purified (IP) with an anti-\( \alpha2 \). Then, a SEC was performed to purify the i20S for further characterisation.
 
 ![Figure 1: SEC of the immuno-enriched proteasome samples](SEC.png)
 
@@ -97,12 +97,6 @@ We will work with the top-down MS data after deconvolution with RoWinPro:
 These are the 2 components of the [Heterogeneous nuclear ribonucleoproteins C1/C2](https://www.uniprot.org/uniprot/P07910) that bind to mRNA. These may have been co-immunopurified with the proteosomal core particules during the IP.
 
 ### Input data
-
-The sample before SEC has been analysed by top-down MS and MS/MS. The associated files are:
-
-* MS trace of the sample after RoWinPro deconvolution: [ProteasomeBeforeSEC_MS.txt](input_data/ProteasomeBeforeSEC_MS.txt)
-* MS/MS: [ProteasomeBeforeSEC_MSMSSpectrumInfo.txt](input_data/ProteasomeBeforeSEC_MSMSSpectrumInfo.txt)
-* Results of the MS/MS search (Biopharma Finder): [ProteasomeBeforeSEC_PSMs.txt](input_data/ProteasomeBeforeSEC_PSMs.txt)
 
 Analysis of the fractions eluted from SEC in top-down MS (after RoWinPro deconvolution):
 
@@ -139,9 +133,17 @@ Analysis of the fractions eluted from SEC in top-down MS (after RoWinPro deconvo
 * What is the mass of the major contaminant in the sample before SEC? Can you identify it?
 * Make figures to illustrate your findings.
 
-### Going further
+---------------------------------
 
-If you still have time, you can load the MS/MS data from the analysis of the sample before SEC. Maybe with these data you can confirm that std20S was present in the sample before immuno-purification?
+### 3. MS/MS analysis of std20S after IP
+
+A sample of immuno-purified std20S before SEC has been analysed by top-down MS and MS/MS. The associated files are:
+
+* MS trace of the sample after RoWinPro deconvolution: [stdProteasomeBeforeSEC_MS.txt](input_data/stdProteasomeBeforeSEC_MS.txt)
+* MS/MS: [stdProteasomeBeforeSEC_MSMSSpectrumInfo.txt](input_data/stdProteasomeBeforeSEC_MSMSSpectrumInfo.txt)
+* Results of the MS/MS search (Biopharma Finder): [stdProteasomeBeforeSEC_PSMs.txt](input_data/stdProteasomeBeforeSEC_PSMs.txt)
+
+If you still have time, you can load this set of MS/MS data:
 
 1. Check the box `MS/MS` (`MS mode`) to access the MS/MS panel of VisioProt-MS.
 2. In `Origin of the MS/MS files`, check `Proteome Discoverer`.
@@ -156,6 +158,10 @@ If you still have time, you can load the MS/MS data from the analysis of the sam
 <div class = "yellow">
 <strong>-></strong>  The corresponding MS trace appears.
 </div>
+
+<br>
+
+You can now play around with these data and check which MS/MS led to the identification of subunits of the std20S proteasome.
 
 <br>
 
