@@ -36,7 +36,8 @@ Their most common post-translational modifications (PTMs) are:
 * N-terminal truncation: variable \( \Delta \) mass.
 * Loss of the N-terminal methionine: - 131.19 Da
 * Acetylation: + 42 Da
-* Oxydations: + 15 Da
+
+And you can find more delta-masses online, for example at [http://www.unimod.org](http://www.unimod.org).
 
 Molecular weights of the subunits identified by @Gersch2015:
 
@@ -44,7 +45,7 @@ Molecular weights of the subunits identified by @Gersch2015:
 
 ***********************************
 
-# 1. Comparison of commercial samples of the standard and immuno proteasome core particules
+# 1. Comparison of commercial samples of the standard and immunoproteasome core particules
 
 The aim of this exercise is to compare the composition of commercial standard 20S (std20S) and immuno-20S (i20S). 
 
@@ -106,7 +107,7 @@ Analysis of the fractions eluted from SEC in top-down MS (after RoWinPro deconvo
 
 ### Step by step instructions
 
-1. Load files corresponding to the 3 fractions after SEC in the `MS` panel of VisioProt-MS. Like for the first part of the workshop, you can:
+1. Load the files corresponding to the 3 fractions after SEC in the `MS` panel of VisioProt-MS. Like for the first part of the workshop, you can:
     * load them one at a time to have a feel for their respective signal and adapt the signal threshold for plotting. This will also allow you to check which proteoforms are the most abundant in case of clusters of elution peaks.
     * load them both at the same time to directly identify which proteoforms are present in only one or the two samples.
   
@@ -147,7 +148,7 @@ If you still have time, you can load this set of MS/MS data:
 
 1. Check the box `MS/MS` (`MS mode`) to access the MS/MS panel of VisioProt-MS.
 2. In `Origin of the MS/MS files`, check `Proteome Discoverer`.
-3. Load the MSMSspectrumInfo and PSM files.
+3. Load the MSMSSpectrumInfo and PSM files.
 
 <div class = "yellow">
 <strong>-></strong>  The data from MS/MS acquisition appear. 
@@ -166,7 +167,7 @@ You can now play around with these data and check which MS/MS led to the identif
 <br>
 
 <div class = "orange">
-<strong>!</strong>  Since the acquisition parameters are adapted to a MS/MS run, the retention times, detection limits and sensitivity may be different from a regular top-down MS run.
+<strong>!</strong>  Since the acquisition parameters are adapted to a MS/MS run, the retention times, detection limits and sensitivity of the MS data may be different from a regular top-down MS run.
 </div>
 
 
